@@ -2854,17 +2854,19 @@
     height: 303px;
   }
 }
-/* --- ΜΟΝΟ για το section Projects --- */
-.u-list-1 .u-repeater-1 {
-  display: grid !important;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  justify-content: center;
-}
+/* --- ΜΟΝΟ για το section Projects και ΜΟΝΟ σε Desktop --- */
+@media (min-width: 1024px) {
+  .u-list-1 .u-repeater-1 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+  }
 
-/* Κεντράρει τα 2 τελευταία κουτάκια (5ο και 6ο) */
-.u-list-1 .u-repeater-item:nth-child(5),
-.u-list-1 .u-repeater-item:nth-child(6) {
-  grid-column: span 2;
-  justify-self: center;
+  /* Κεντράρει τα 2 τελευταία κουτάκια (5ο και 6ο) */
+  .u-list-1 .u-repeater-item:nth-child(5),
+  .u-list-1 .u-repeater-item:nth-child(6) {
+    grid-column: span 2;
+    justify-self: center;
+  }
 }
