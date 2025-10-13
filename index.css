@@ -2854,9 +2854,3 @@
     height: 303px;
   }
 }
-.u-repeater-1 {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: center !important; /* Κεντράρει οριζόντια */
-  gap: 20px !important; /* Απόσταση ανάμεσα στα κουτάκια */
-}
