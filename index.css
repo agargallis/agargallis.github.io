@@ -2854,3 +2854,20 @@
     height: 303px;
   }
 }
+/* Στυλ μόνο για το section Projects */
+.u-list-1 .u-repeater-1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.u-list-1 .u-repeater-item {
+  flex: 0 0 calc(25% - 20px); /* 4 projects στη σειρά */
+  margin: 10px;
+}
+
+/* Κεντράρει μόνο τα 2 τελευταία κουτάκια */
+.u-list-1 .u-repeater-item:nth-last-child(-n+2) {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
