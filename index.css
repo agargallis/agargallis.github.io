@@ -2855,19 +2855,3 @@
   }
 }
 
-
-.social-icons {
-  display: flex;
-  gap: 20px;          /* ίση απόσταση μεταξύ εικόνων */
-  align-items: center; /* κεντράρει κατακόρυφα */
-}
-
-.social-icons img {
-  width: 50px;        /* ίδιο πλάτος για όλες */
-  height: 50px;       /* ίδιο ύψος για όλες */
-  object-fit: contain; /* κρατάει αναλογίες εικόνας */
-}
-
-
-
-
