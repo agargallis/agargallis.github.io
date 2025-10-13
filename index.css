@@ -2854,20 +2854,17 @@
     height: 303px;
   }
 }
-/* Στυλ μόνο για το section Projects */
+/* --- ΜΟΝΟ για το section Projects --- */
 .u-list-1 .u-repeater-1 {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
 }
 
-.u-list-1 .u-repeater-item {
-  flex: 0 0 calc(25% - 20px); /* 4 projects στη σειρά */
-  margin: 10px;
+/* Κεντράρει τα 2 τελευταία κουτάκια (5ο και 6ο) */
+.u-list-1 .u-repeater-item:nth-child(5),
+.u-list-1 .u-repeater-item:nth-child(6) {
+  grid-column: span 2;
+  justify-self: center;
 }
-
-/* Κεντράρει μόνο τα 2 τελευταία κουτάκια */
-.u-list-1 .u-repeater-item:nth-last-child(-n+2) {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
