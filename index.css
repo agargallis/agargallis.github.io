@@ -2855,3 +2855,33 @@
   }
 }
 
+
+/* Κεντράρισμα των τελευταίων 2 project items μόνο σε desktop */
+@media (min-width: 992px) {
+  .u-repeater-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  /* Τα 4 πρώτα items παραμένουν κανονικά */
+  .u-repeater-1 .u-list-item-1,
+  .u-repeater-1 .u-list-item-2,
+  .u-repeater-1 .u-list-item-3,
+  .u-repeater-1 .u-list-item-4 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  
+  /* Τα τελευταία 2 items (5ο και 6ο) */
+  .u-repeater-1 .u-list-item:nth-child(5),
+  .u-repeater-1 .u-list-item:nth-child(6) {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  
+  /* Δημιουργία κενού χώρου πριν το 5ο item για να το κεντράρουμε */
+  .u-repeater-1 .u-list-item:nth-child(5) {
+    margin-left: 12.5%; /* 12.5% = μισό κουτί (25% / 2) */
+  }
+}
