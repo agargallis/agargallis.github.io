@@ -2854,3 +2854,30 @@
     height: 303px;
   }
 }
+
+
+
+/* Κεντράρισμα των τελευταίων 2 project items ΜΟΝΟ σε desktop */
+@media (min-width: 992px) {
+  /* Πιάνουμε ΜΟΝΟ το section που περιέχει το "Projects" heading */
+  section:has(h2.u-text-1:contains("Projects")) .u-list-1 .u-repeater-1,
+  .u-list-1 .u-repeater-1 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+  }
+  
+  .u-list-1 .u-repeater-1 > .u-list-item:nth-child(5) {
+    grid-column: 2 / 3 !important;
+  }
+  
+  .u-list-1 .u-repeater-1 > .u-list-item:nth-child(6) {
+    grid-column: 3 / 4 !important;
+  }
+  
+  /* Όλα τα ΑΛΛΑ .u-repeater να μην επηρεαστούν */
+  .u-list-1 .u-repeater-1:not(:has(.u-list-item-1)) {
+    display: flex !important;
+    grid-template-columns: unset !important;
+  }
+}
