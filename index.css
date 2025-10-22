@@ -2881,3 +2881,11 @@
     grid-template-columns: unset !important;
   }
 }
+
+
+img[src*="logo3.png"] {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 40px;
+}
