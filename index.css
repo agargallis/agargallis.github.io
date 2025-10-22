@@ -2903,6 +2903,6 @@ img[src*="logo3.png"] {
     img[src*="logo3.png"] {
         width: 70px;
         margin: 0 20px 0 0;
-        transform: translateX(-40px);
+        transform: translateX(-60px);
     }
 }
