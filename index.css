@@ -2887,5 +2887,6 @@ img[src*="logo3.png"] {
     width: 120px;
     height: auto;
     object-fit: contain;
-    margin: 0 40px;
+    margin-left: 0px;
+    margin-right: 80px;
 }
