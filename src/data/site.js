@@ -115,7 +115,7 @@
         icon: "/images/transparent-Photoroom.png",
       },
       {
-        title: "GiafalisCar",
+        title: "GiafalisCar Website",
         href: "https://giafaliscar.gr",
         icon: "/images/transparent-Photoroom1.png",
       },
