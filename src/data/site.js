@@ -1,4 +1,4 @@
-﻿export const site = {
+export const site = {
   meta: {
     title: "Portfolio",
     description: "Antonios Gargallis",
@@ -121,7 +121,7 @@
       },
       {
         title: "Barbershop Booking App",
-        href: "https://barbershop-booking-app.vercel.app/",
+        href: "https://barbershop-booking-jet.vercel.app/",
         icon: "/images/barber.png",
       },
     ],
@@ -265,12 +265,20 @@
     work: [
       {
         title: "Referee Specialist",
+<<<<<<< HEAD
         period: "FEB 2026 - TILL NOW",
+=======
+        period: "MAR 2025 - TILL NOW",
+>>>>>>> fb2740a9c450e8ee621193ca3515b255e80e8eb7
         description: "Basketaki The League",
       },
       {
         title: "Statistics Specialist",
+<<<<<<< HEAD
         period: "JAN 2025 - JAN 2026",
+=======
+        period: "JAN 2024 - FEB 2025",
+>>>>>>> fb2740a9c450e8ee621193ca3515b255e80e8eb7
         description: "Basketaki The League",
       },
       {
