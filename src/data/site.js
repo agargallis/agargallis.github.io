@@ -1,4 +1,4 @@
-﻿export const site = {
+export const site = {
   meta: {
     title: "Portfolio",
     description: "Antonios Gargallis",
@@ -121,7 +121,7 @@
       },
       {
         title: "Barbershop Booking App",
-        href: "https://barbershop-booking-app.vercel.app/",
+        href: "https://barbershop-booking-jet.vercel.app/",
         icon: "/images/barber.png",
       },
     ],
