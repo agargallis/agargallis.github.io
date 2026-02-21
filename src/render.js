@@ -510,4 +510,52 @@ export const initAnimations = () => {
     });
   });
 
+  const contactForms = document.querySelectorAll(".contact-form");
+
+  contactForms.forEach((form) => {
+    const successMessage = form.querySelector(".form-message:not(.form-error)");
+    const errorMessage = form.querySelector(".form-message.form-error");
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    if (!successMessage || !errorMessage) {
+      return;
+    }
+
+    const resetMessages = () => {
+      successMessage.classList.remove("is-visible");
+      errorMessage.classList.remove("is-visible");
+    };
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      resetMessages();
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.setAttribute("aria-busy", "true");
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
+
+        if (response.ok) {
+          successMessage.classList.add("is-visible");
+          form.reset();
+        } else {
+          errorMessage.classList.add("is-visible");
+        }
+      } catch (error) {
+        errorMessage.classList.add("is-visible");
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.removeAttribute("aria-busy");
+        }
+      }
+    });
+  });
 };

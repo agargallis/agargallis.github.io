@@ -1128,8 +1128,19 @@ a {
   color: var(--accent);
 }
 
+.form-message.is-visible {
+  display: block;
+}
+
 .form-error {
   color: #e04444;
+}
+
+.btn[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
 }
 
 .form-illustration {
