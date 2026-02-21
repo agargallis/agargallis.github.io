@@ -261,8 +261,10 @@ export const renderLanguagesSection = () => `
       <div class="work-timeline reveal">
         <div class="work-line"></div>
         ${site.languages.work
-          .map(
-            (item) => `
+          .map((item) => {
+            const workImage = item.image || site.languages.workImage;
+
+            return `
             <article class="work-item">
               <div class="work-marker">
                 <span class="work-dot"></span>
@@ -276,13 +278,13 @@ export const renderLanguagesSection = () => `
                   </div>
                   <p>${item.description}</p>
                 </div>
-                <a class="work-card-logo" href="${site.languages.workImage.href}" ${externalAttrs}>
-                  <img src="${site.languages.workImage.src}" alt="${site.languages.workImage.alt}" loading="lazy" />
+                <a class="work-card-logo" href="${workImage.href}" ${externalAttrs}>
+                  <img src="${workImage.src}" alt="${workImage.alt}" loading="lazy" />
                 </a>
               </div>
             </article>
-          `
-          )
+          `;
+          })
           .join("")}
       </div>
     </div>

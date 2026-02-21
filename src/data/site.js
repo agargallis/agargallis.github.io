@@ -265,13 +265,23 @@
     work: [
       {
         title: "Referee Specialist",
-        period: "FEB 2025 - TILL NOW",
+        period: "FEB 2026 - TILL NOW",
         description: "Basketaki The League",
       },
       {
         title: "Statistics Specialist",
-        period: "JAN 2024 - JAN 2025",
+        period: "JAN 2025 - JAN 2026",
         description: "Basketaki The League",
+      },
+      {
+        title: "Teaching Assistant of Blind Student",
+        period: "JAN 2025 - JUNE 2025",
+        description: "National & Kapodistrian University of Athens",
+        image: {
+          src: "/images/18.png",
+          alt: "NKUA",
+          href: "https://www.di.uoa.gr/",
+        },
       },
     ],
     workImage: {
