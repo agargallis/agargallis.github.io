@@ -393,7 +393,7 @@ export const renderFormSection = (options = {}) => {
     <div class="container form-grid">
       <div class="form-card reveal">
         <h2>${site.form.title}</h2>
-        <form action="${site.form.action}" method="POST" class="contact-form">
+        <form action="#" data-action="${site.form.action}" method="POST" class="contact-form">
           <label>
             ${site.form.fields.name.label}
             <input type="text" name="name" placeholder="${site.form.fields.name.placeholder}" required />
@@ -536,7 +536,8 @@ export const initAnimations = () => {
       }
 
       try {
-        const response = await fetch(form.action, {
+        const action = form.dataset.action || form.action;
+        const response = await fetch(action, {
           method: "POST",
           body: new FormData(form),
           headers: { Accept: "application/json" },
