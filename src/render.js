@@ -393,7 +393,7 @@ export const renderFormSection = (options = {}) => {
     <div class="container form-grid">
       <div class="form-card reveal">
         <h2>${site.form.title}</h2>
-        <form action="#" data-action="${site.form.action}" method="POST" class="contact-form">
+        <form action="#" data-action="${site.form.action}" method="POST" class="contact-form" onsubmit="return false">
           <label>
             ${site.form.fields.name.label}
             <input type="text" name="name" placeholder="${site.form.fields.name.placeholder}" required />
@@ -510,9 +510,7 @@ export const initAnimations = () => {
     });
   });
 
-  const contactForms = document.querySelectorAll(".contact-form");
-
-  contactForms.forEach((form) => {
+  const submitContactForm = async (form) => {
     const successMessage = form.querySelector(".form-message:not(.form-error)");
     const errorMessage = form.querySelector(".form-message.form-error");
     const submitButton = form.querySelector('button[type="submit"]');
@@ -526,37 +524,50 @@ export const initAnimations = () => {
       errorMessage.classList.remove("is-visible");
     };
 
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      resetMessages();
+    resetMessages();
 
-      if (submitButton) {
-        submitButton.disabled = true;
-        submitButton.setAttribute("aria-busy", "true");
-      }
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.setAttribute("aria-busy", "true");
+    }
 
-      try {
-        const action = form.dataset.action || form.action;
-        const response = await fetch(action, {
-          method: "POST",
-          body: new FormData(form),
-          headers: { Accept: "application/json" },
-        });
+    try {
+      const action = form.dataset.action || form.action;
+      const response = await fetch(action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
 
-        if (response.ok) {
-          successMessage.classList.add("is-visible");
-          form.reset();
-        } else {
-          errorMessage.classList.add("is-visible");
-        }
-      } catch (error) {
+      if (response.ok) {
+        successMessage.classList.add("is-visible");
+        form.reset();
+      } else {
         errorMessage.classList.add("is-visible");
-      } finally {
-        if (submitButton) {
-          submitButton.disabled = false;
-          submitButton.removeAttribute("aria-busy");
-        }
       }
-    });
-  });
+    } catch (error) {
+      errorMessage.classList.add("is-visible");
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.removeAttribute("aria-busy");
+      }
+    }
+  };
+
+  if (!document.body.dataset.formHandler) {
+    document.body.dataset.formHandler = "true";
+    document.addEventListener(
+      "submit",
+      (event) => {
+        const form = event.target.closest(".contact-form");
+        if (!form) {
+          return;
+        }
+        event.preventDefault();
+        submitContactForm(form);
+      },
+      true
+    );
+  }
 };
