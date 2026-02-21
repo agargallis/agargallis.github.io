@@ -2,7 +2,7 @@
 const { execSync } = require("child_process");
 const path = require("path");
 
-const inputs = ["index.html", "resume/index.html", "contact/index.html"];
+const inputs = ["index.html", "resume.html", "contact.html"];
 
 for (const input of inputs) {
   const fullPath = path.resolve(process.cwd(), input);
@@ -26,6 +26,7 @@ for (const input of inputs) {
 
   if (stat.isDirectory()) {
     try {
+      console.warn(`[ensure-inputs] ${input} is a directory. Replacing with file from git.`);
       rmSync(fullPath, { recursive: true, force: true });
       execSync(`git checkout -- ${input}`, { stdio: "inherit" });
     } catch (error) {
