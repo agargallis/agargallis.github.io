@@ -60,7 +60,6 @@ export const site = {
     intro:
       "I was born in October of 2006 in Athens. I successfully completed my high school education at the 9th General Lyceum of Peristeri in June of 2024, and I am currently pursuing my studies in the Department of Informatics and Telecommunications at the National and Kapodistrian University of Athens. I am working also as a Referee Specialist for Basketaki The League, and I am the founder of UBD, a startup focused on providing comprehensive digital solutions for businesses.",
     highlights: [
-      "Born: October 2006",
       "Focus: Web Solutions & Digital Growth",
       "Driven by: Innovation, Speed, Quality",
     ],
