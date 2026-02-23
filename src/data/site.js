@@ -327,7 +327,7 @@ export const site = {
       label: "Email",
       value: "antonisgargallis@gmail.com",
       href:
-        "mailto:antonisgargallis@gmail.com?subject=See%20You%20From%20Your%20Web%20Site%F0%9F%A4%B5",
+        "mailto:antonisgargallis@gmail.com",
       icon: "/images/646135-a85e65c4.png",
     },
     image: "/images/24.jpg",
