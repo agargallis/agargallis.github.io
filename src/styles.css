@@ -825,7 +825,7 @@ a {
 .inline-link {
   color: var(--accent);
   font-weight: 600;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
   transition: opacity 0.2s ease;
 }
@@ -901,6 +901,7 @@ a {
   background: radial-gradient(circle at top, rgba(43, 123, 216, 0.12), transparent 55%);
   opacity: 0;
   transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .timeline-card:hover {
