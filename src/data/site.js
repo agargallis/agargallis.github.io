@@ -337,7 +337,7 @@ export const site = {
     action: "https://formspree.io/f/xldbbjvq",
     illustration: "/images/24770152_101.png",
     fields: {
-      name: { label: "Name", placeholder: "Enter your Name" },
+      name: { label: "Name", placeholder: "Enter your name" },
       email: { label: "Email", placeholder: "Enter a valid email address" },
       message: { label: "Message", placeholder: "Enter your message" },
     },
