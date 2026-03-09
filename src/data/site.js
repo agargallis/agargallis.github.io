@@ -109,6 +109,11 @@ export const site = {
         icon: "/images/insta.png",
       },
       {
+        title: "Instagram Page",
+        href: "https://www.instagram.com/kalamaki_lab/",
+        icon: "/images/IMG_4214.png",
+      },
+      {
         title: "Musician Website",
         href: "https://jimvlachos.gr",
         icon: "/images/transparent-Photoroom.png",
