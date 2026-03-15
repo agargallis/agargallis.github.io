@@ -119,6 +119,11 @@ export const site = {
         icon: "/images/transparent-Photoroom1.png",
       },
       {
+        title: "Barbershop Queue System",
+        href: "https://barbershop-qr.vercel.app",
+        icon: "/3.png",
+      },
+      {
         title: "Barbershop Booking App",
         href: "https://barbershop-booking-jet.vercel.app/",
         icon: "/images/barber.png",
