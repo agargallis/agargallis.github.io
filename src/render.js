@@ -556,7 +556,6 @@ export const renderFormSection = (options = {}) => {
             <textarea name="message" rows="4" placeholder="${site.form.fields.message.placeholder}" required></textarea>
           </label>
           <button class="btn" type="submit">${site.form.submitLabel}</button>
-          <p class="form-note">${site.form.notice}</p>
           <p class="form-message" aria-live="polite">${site.form.successMessage}</p>
           <p class="form-message form-error" aria-live="polite">${site.form.errorMessage}</p>
         </form>

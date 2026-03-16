@@ -352,8 +352,6 @@ export const site = {
       message: { label: "Message", placeholder: "Enter your message" },
     },
     submitLabel: "Submit",
-    notice:
-      "Your details are used only to reply to your message when you choose to contact me.",
     successMessage: "Thank you! Your message has been sent.",
     errorMessage: "Unable to send your message. Please fix errors then try again.",
   },
