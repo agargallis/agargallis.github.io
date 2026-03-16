@@ -5,6 +5,9 @@ const dist = resolve(process.cwd(), "dist");
 const copies = [
   { from: "resume.html", to: "resume/index.html" },
   { from: "contact.html", to: "contact/index.html" },
+  { from: "cookies.html", to: "cookies/index.html" },
+  { from: "privacy.html", to: "privacy/index.html" },
+  { from: "terms.html", to: "terms/index.html" },
 ];
 
 for (const { from, to } of copies) {

@@ -19,7 +19,7 @@ export const site = {
   },
   header: {
     logo: "/images/AG.png",
-    home: "https://agargallis.github.io",
+    home: "https://ubd.gr",
     socials: [
       {
         label: "LinkedIn",
@@ -352,6 +352,8 @@ export const site = {
       message: { label: "Message", placeholder: "Enter your message" },
     },
     submitLabel: "Submit",
+    notice:
+      "Your details are used only to reply to your message when you choose to contact me.",
     successMessage: "Thank you! Your message has been sent.",
     errorMessage: "Unable to send your message. Please fix errors then try again.",
   },
@@ -359,8 +361,115 @@ export const site = {
     label: "Blog",
     href: "/blog/blog.html",
   },
+  cookieBanner: {
+    title: "Cookies & Contact Data",
+    description:
+      "No tracking cookies. Contact details are used only if you choose to message me.",
+    acceptLabel: "Accept",
+    declineLabel: "Decline",
+  },
+  legal: {
+    navLabel: "Legal Pages",
+    links: [
+      {
+        key: "cookies",
+        label: "Cookies",
+        href: "/cookies/",
+        canonical: "/cookies/",
+        icon: "cookie",
+        title: "Cookie Policy",
+        intro:
+          "This website keeps things simple. No advertising cookies, no analytics trackers, and no third-party profiling cookies are used here.",
+        updated: "March 16, 2026",
+        sections: [
+          {
+            heading: "What is used",
+            body:
+              "A single essential preference cookie may be stored to remember whether you accepted or declined the cookie banner. It exists only so the banner does not keep appearing on every visit.",
+          },
+          {
+            heading: "What is not used",
+            body:
+              "This site does not use analytics, remarketing pixels, behavioral advertising cookies, or social media tracking scripts.",
+          },
+          {
+            heading: "Contact form",
+            body:
+              "If you choose to send a message through the contact form, the information you enter is submitted only for communication purposes and is not collected automatically while browsing.",
+          },
+        ],
+      },
+      {
+        key: "privacy",
+        label: "Privacy",
+        href: "/privacy/",
+        canonical: "/privacy/",
+        icon: "privacy",
+        title: "Privacy Policy",
+        intro:
+          "Your privacy matters. Browsing this site does not require you to provide personal data.",
+        updated: "March 16, 2026",
+        sections: [
+          {
+            heading: "Personal data collected",
+            body:
+              "The only personal data collected through this site is the data you voluntarily provide in the contact form, such as your name, email address, and message.",
+          },
+          {
+            heading: "Why it is collected",
+            body:
+              "That information is used only to review your request and reply to you. It is not sold, rented, or used for advertising.",
+          },
+          {
+            heading: "Third-party processing",
+            body:
+              "Messages are delivered through the Formspree contact form service. By submitting the form, you understand that your message is transmitted to that service so it can reach me.",
+          },
+          {
+            heading: "Your choice",
+            body:
+              "If you do not want to share personal details, simply do not submit the contact form. You can still browse the site without doing so.",
+          },
+        ],
+      },
+      {
+        key: "terms",
+        label: "Terms",
+        href: "/terms/",
+        canonical: "/terms/",
+        icon: "terms",
+        title: "Terms of Use",
+        intro:
+          "These terms explain the basic rules for using this portfolio website and contacting me through it.",
+        updated: "March 16, 2026",
+        sections: [
+          {
+            heading: "Website purpose",
+            body:
+              "This website presents my work, experience, and ways to contact me. The content is provided for general informational and professional communication purposes.",
+          },
+          {
+            heading: "Content ownership",
+            body:
+              "Unless otherwise stated, the design, text, and original portfolio content on this website belong to Antonios Gargallis and should not be copied or reused in misleading ways.",
+          },
+          {
+            heading: "External links",
+            body:
+              "Some sections link to third-party websites. I am not responsible for their content, security, or privacy practices once you leave this site.",
+          },
+          {
+            heading: "Contact form use",
+            body:
+              "Please use the contact form only for legitimate communication related to projects, collaboration, or professional inquiries.",
+          },
+        ],
+      },
+    ],
+  },
   footer: {
     text: "© 2025 Antonios Gargallis. All rights reserved.",
     href: "https://ubd.gr",
+    legalLabel: "Legal",
   },
 };

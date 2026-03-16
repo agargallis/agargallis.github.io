@@ -2,7 +2,14 @@
 const { execSync } = require("child_process");
 const path = require("path");
 
-const inputs = ["index.html", "resume.html", "contact.html"];
+const inputs = [
+  "index.html",
+  "resume.html",
+  "contact.html",
+  "cookies.html",
+  "privacy.html",
+  "terms.html",
+];
 
 for (const input of inputs) {
   const fullPath = path.resolve(process.cwd(), input);

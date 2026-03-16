@@ -15,6 +15,15 @@ export default defineConfig({
           if (req.url === "/contact" || req.url === "/contact/") {
             req.url = "/contact.html";
           }
+          if (req.url === "/cookies" || req.url === "/cookies/") {
+            req.url = "/cookies.html";
+          }
+          if (req.url === "/privacy" || req.url === "/privacy/") {
+            req.url = "/privacy.html";
+          }
+          if (req.url === "/terms" || req.url === "/terms/") {
+            req.url = "/terms.html";
+          }
           next();
         });
       },
@@ -25,6 +34,15 @@ export default defineConfig({
           }
           if (req.url === "/contact" || req.url === "/contact/") {
             req.url = "/contact.html";
+          }
+          if (req.url === "/cookies" || req.url === "/cookies/") {
+            req.url = "/cookies.html";
+          }
+          if (req.url === "/privacy" || req.url === "/privacy/") {
+            req.url = "/privacy.html";
+          }
+          if (req.url === "/terms" || req.url === "/terms/") {
+            req.url = "/terms.html";
           }
           next();
         });
@@ -38,6 +56,9 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         resume: resolve(__dirname, "resume.html"),
         contact: resolve(__dirname, "contact.html"),
+        cookies: resolve(__dirname, "cookies.html"),
+        privacy: resolve(__dirname, "privacy.html"),
+        terms: resolve(__dirname, "terms.html"),
       },
     },
   },
