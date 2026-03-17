@@ -135,7 +135,7 @@ export const site = {
       },
       {
         title: "Teammate Personal Portfolio",
-        href: "https://agggeloszax.github.io",
+        href: "https://aggeloszax.github.io",
         icon: "/images/AZ.png",
       }
     ],
