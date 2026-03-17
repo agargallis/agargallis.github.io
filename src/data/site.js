@@ -132,6 +132,11 @@ export const site = {
         title: "Instagram Page",
         href: "https://www.instagram.com/kalamaki_lab/",
         icon: "/images/IMG_4214.png",
+      },
+      {
+        title: "Teammate Personal Portfolio",
+        href: "https://agggeloszax.github.io",
+        icon: "/images/AZ.png",
       }
     ],
   },
