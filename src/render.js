@@ -182,7 +182,8 @@ const renderTagline = (items) =>
     .join("");
 
 const renderProjects = (projects) =>
-  projects
+  [...projects]
+    .reverse()
     .map(
       (project) => `
         <a class="card project-card" href="${project.href}" ${externalAttrs}>
