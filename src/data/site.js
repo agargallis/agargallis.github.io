@@ -210,7 +210,7 @@ export const site = {
       },
       {
         title: "Startup Founder",
-        subtitle: "Idea: \"UBD | Upgrading Business Digitally\"",
+        subtitle: "Idea: \"UBD\"",
         description: [
           "Site Development",
           "Total Social Media Management & Safety",
