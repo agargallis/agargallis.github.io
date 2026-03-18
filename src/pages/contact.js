@@ -5,6 +5,7 @@ import {
   renderContactLoop,
   renderFormSection,
   renderFooter,
+  initNavigationTitleHints,
   initAnimations,
 } from "../render";
 
@@ -22,4 +23,5 @@ app.innerHTML = `
   ${renderFooter()}
 `;
 
+initNavigationTitleHints();
 initAnimations();

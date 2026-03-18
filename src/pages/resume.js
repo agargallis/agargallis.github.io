@@ -7,6 +7,7 @@ import {
   renderLanguagesSection,
   renderEducationSection,
   renderFooter,
+  initNavigationTitleHints,
   initAnimations,
 } from "../render";
 
@@ -24,4 +25,5 @@ app.innerHTML = `
   ${renderFooter()}
 `;
 
+initNavigationTitleHints();
 initAnimations();

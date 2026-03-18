@@ -638,6 +638,60 @@ export const renderFooter = () => {
 `;
 };
 
+export const initNavigationTitleHints = () => {
+  const titleByPath = {
+    "/": "Antonis Gargallis",
+    "/contact": "Contact",
+    "/resume": "Resume",
+  };
+
+  if (document.body.dataset.titleHintsBound) {
+    return;
+  }
+
+  document.body.dataset.titleHintsBound = "true";
+
+  document.addEventListener(
+    "click",
+    (event) => {
+      const anchor = event.target.closest("a[href]");
+
+      if (!anchor) {
+        return;
+      }
+
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey
+      ) {
+        return;
+      }
+
+      const target = anchor.getAttribute("target");
+      if (target && target !== "_self") {
+        return;
+      }
+
+      const url = new URL(anchor.href, window.location.origin);
+      if (url.origin !== window.location.origin) {
+        return;
+      }
+
+      const normalizedPath = url.pathname.replace(/\/+$/, "") || "/";
+      const nextTitle = titleByPath[normalizedPath];
+
+      if (nextTitle) {
+        document.title = nextTitle;
+      }
+    },
+    true
+  );
+};
+
 export const initAnimations = () => {
   const revealElements = document.querySelectorAll(".reveal");
   const cookieBanner = document.querySelector("[data-cookie-banner]");
