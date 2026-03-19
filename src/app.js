@@ -173,8 +173,12 @@ const bindRouter = () => {
         if (hasDifferentQueryOrHash || hasActiveLegalState) {
           event.preventDefault();
           navigateTo(`${url.pathname}${url.search}${url.hash}`, true, {});
+          window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+          return;
         }
 
+        event.preventDefault();
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
         return;
       }
 
