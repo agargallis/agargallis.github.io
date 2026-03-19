@@ -137,13 +137,16 @@ const renderSocials = (socials) =>
 
 const renderLegalIcon = (icon) => legalIcons[icon] || legalIcons.terms;
 
-const renderLegalLinks = (links, activeKey = "") =>
-  links
+const renderLegalLinks = (links, activeKey = "", options = {}) => {
+  const inPageSwitch = options.inPageSwitch === true;
+
+  return links
     .map(
       (link) => `
         <a
           class="legal-link${link.key === activeKey ? " is-active" : ""}"
           href="${link.href}"
+          ${inPageSwitch ? `data-legal-key="${link.key}"` : ""}
           aria-label="${link.label}"
         >
           <span class="legal-link-icon">${renderLegalIcon(link.icon)}</span>
@@ -152,6 +155,7 @@ const renderLegalLinks = (links, activeKey = "") =>
       `
     )
     .join("");
+};
 
 const renderNavLink = (href, label, icon) => `
   <a class="nav-highlight nav-rich-link" href="${href}" aria-label="${label}" title="${label}">
@@ -588,7 +592,7 @@ export const renderLegalPage = (pageKey) => {
           <strong>${page.updated}</strong>
         </div>
         <div class="legal-nav" aria-label="${site.legal.navLabel}">
-          ${renderLegalLinks(site.legal.links, page.key)}
+          ${renderLegalLinks(site.legal.links, page.key, { inPageSwitch: true })}
         </div>
       </div>
       <div class="legal-grid">

@@ -10,9 +10,11 @@ import {
   renderCertificationsSection,
   renderLanguagesSection,
   renderEducationSection,
+  renderLegalPage,
   renderFooter,
   initAnimations,
 } from "./render";
+import { site } from "./data/site";
 
 const app = document.querySelector("#app");
 
@@ -47,6 +49,18 @@ const routeConfig = {
 
 const normalizePath = (pathname) => pathname.replace(/\/+$/, "") || "/";
 
+const getLegalPage = (pageKey) =>
+  site.legal.links.find((link) => link.key === pageKey);
+
+const getLegalPageKeyFromUrl = (url) => {
+  const normalizedPath = normalizePath(url.pathname);
+  const legalLink = site.legal.links.find(
+    (link) => normalizePath(link.href) === normalizedPath
+  );
+
+  return legalLink ? legalLink.key : "";
+};
+
 const getRoute = (pathname) => {
   const normalizedPath = normalizePath(pathname);
   return routeConfig[normalizedPath] || routeConfig["/"];
@@ -59,17 +73,18 @@ const setCanonical = (canonicalPath) => {
   }
 };
 
-const renderRoute = (pathname) => {
+const renderRoute = (pathname, options = {}) => {
   const route = getRoute(pathname);
+  const legalPage = getLegalPage(options.legalPageKey || "");
 
-  document.title = route.title;
-  setCanonical(route.canonical);
+  document.title = legalPage ? legalPage.title : route.title;
+  setCanonical(legalPage ? legalPage.canonical : route.canonical);
 
   app.innerHTML = `
     ${renderBackdrop()}
     ${renderHeader()}
     <main>
-      ${route.renderMain()}
+      ${legalPage ? renderLegalPage(legalPage.key) : route.renderMain()}
     </main>
     ${renderFooter()}
   `;
@@ -77,14 +92,14 @@ const renderRoute = (pathname) => {
   initAnimations();
 };
 
-const navigateTo = (url, replace = false) => {
+const navigateTo = (url, replace = false, state = {}) => {
   if (replace) {
-    window.history.replaceState({}, "", url);
+    window.history.replaceState(state, "", url);
   } else {
-    window.history.pushState({}, "", url);
+    window.history.pushState(state, "", url);
   }
 
-  renderRoute(window.location.pathname);
+  renderRoute(window.location.pathname, state);
 };
 
 const shouldHandleAsInternalRoute = (url) => {
@@ -129,24 +144,50 @@ const bindRouter = () => {
         return;
       }
 
+      const legalPageKey =
+        anchor.dataset.legalKey || getLegalPageKeyFromUrl(url);
+      if (legalPageKey) {
+        event.preventDefault();
+        navigateTo(
+          `${window.location.pathname}${window.location.search}${window.location.hash}`,
+          false,
+          { legalPageKey }
+        );
+        return;
+      }
+
       if (!shouldHandleAsInternalRoute(url)) {
         return;
       }
 
-      if (normalizePath(url.pathname) === normalizePath(window.location.pathname)) {
+      const isSamePath =
+        normalizePath(url.pathname) === normalizePath(window.location.pathname);
+
+      if (isSamePath) {
+        const hasDifferentQueryOrHash =
+          url.search !== window.location.search || url.hash !== window.location.hash;
+        const hasActiveLegalState = Boolean(
+          window.history.state && window.history.state.legalPageKey
+        );
+
+        if (hasDifferentQueryOrHash || hasActiveLegalState) {
+          event.preventDefault();
+          navigateTo(`${url.pathname}${url.search}${url.hash}`, true, {});
+        }
+
         return;
       }
 
       event.preventDefault();
-      navigateTo(`${url.pathname}${url.search}${url.hash}`);
+      navigateTo(`${url.pathname}${url.search}${url.hash}`, false, {});
     },
     true
   );
 
-  window.addEventListener("popstate", () => {
-    renderRoute(window.location.pathname);
+  window.addEventListener("popstate", (event) => {
+    renderRoute(window.location.pathname, event.state || {});
   });
 };
 
 bindRouter();
-renderRoute(window.location.pathname);
+renderRoute(window.location.pathname, window.history.state || {});
