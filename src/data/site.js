@@ -279,12 +279,12 @@ export const site = {
     work: [
       {
         title: "Referee Specialist",
-        period: "MAR 2026 - TILL NOW",
+        period: "APR 2026 - TILL NOW",
         description: "Basketaki The League",
       },
       {
         title: "Statistics Specialist",
-        period: "JAN 2025 - FEB 2026",
+        period: "JAN 2025 - MAR 2026",
         description: "Basketaki The League",
       },
       {
