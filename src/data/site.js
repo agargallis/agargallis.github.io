@@ -137,7 +137,22 @@ export const site = {
         title: "Teammate Personal Portfolio",
         href: "https://aggeloszax.github.io",
         icon: "/images/AZ.png",
-      }
+      },
+      {
+        title: "Instagram Page",
+        href: "https://www.instagram.com/metaxumasouzeri/",
+        icon: "/images/100.png",
+      },
+      {
+        title: "Logo Designing",
+        href: "https://shorturl.at/qOrQm",
+        icon: "/images/4.png",
+      },
+      {
+        title: "Food & Lives Restaurant Website",
+        href: "https://metaxumas.gr",
+        icon: "/images/99.png",
+      },
     ],
   },
   certifications: {
