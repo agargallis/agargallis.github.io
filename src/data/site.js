@@ -106,7 +106,7 @@ export const site = {
       {
         title: "Instagram Page",
         href: "https://www.instagram.com/liotrivi_peristeri/",
-        icon: "/images/insta.png",
+        icon: "https://i.imgur.com/Xi8YtM6.png",
       },
       {
         title: "Musician Website",
