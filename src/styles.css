@@ -585,7 +585,9 @@ a {
   display: grid;
   gap: 20px;
   grid-template-rows: 1fr auto;
-  min-width: 260px;
+  min-width: 280px;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .cert-card h3 {
@@ -599,7 +601,6 @@ a {
   margin: 0 0 12px;
   font-weight: 600;
   color: var(--accent-3);
-  min-height: 2.6em;
   text-align: center;
 }
 
