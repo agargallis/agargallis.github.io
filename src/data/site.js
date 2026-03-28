@@ -164,7 +164,7 @@ export const site = {
         description: [
           "Five Members Team Working",
           "Javascript / Python / React / Git / SQL",
-          "Databases Management",
+          "Databases Management & ML",
           "Claude Code",
         ],
         cta: { label: "ThinkBiz Academy", href: "https://thinkbiz.gr/projects/thinkbiz-academy-2025/" },
