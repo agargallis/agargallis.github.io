@@ -90,6 +90,7 @@ const renderRoute = (pathname, options = {}) => {
   `;
 
   initAnimations();
+  window.scrollTo(0, 0);
 };
 
 const navigateTo = (url, replace = false, state = {}) => {
