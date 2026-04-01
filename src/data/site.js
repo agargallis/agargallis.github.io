@@ -141,7 +141,7 @@ export const site = {
       {
         title: "Instagram Page",
         href: "https://www.instagram.com/metaxu.mas/",
-        icon: "/images/100.png",
+        icon: "/images/99.png",
       },
       {
         title: "Logo Designing",
@@ -151,7 +151,7 @@ export const site = {
       {
         title: "Food & Lives Restaurant Website",
         href: "https://metaxumas.gr",
-        icon: "/images/99.png",
+        icon: "/images/100.png",
       },
     ],
   },
