@@ -140,7 +140,7 @@ export const site = {
       },
       {
         title: "Instagram Page",
-        href: "https://www.instagram.com/metaxumasouzeri/",
+        href: "https://www.instagram.com/metaxu.mas/",
         icon: "/images/100.png",
       },
       {
