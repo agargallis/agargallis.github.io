@@ -342,8 +342,7 @@ export const site = {
         school: "National & Kapodistrian University of Athens",
         period: "SEP 2024 - TILL NOW",
         program: "Department of Informatics and Telecommunications",
-        description:
-          "The Department of Informatics and Telecommunications at NKUA is a leading academic and research unit in the fields of computer science, telecommunications, and information technology. It offers a comprehensive curriculum covering areas such as artificial intelligence, software engineering, cybersecurity, and networks, and is actively involved in cutting-edge research and international collaborations.",
+        description: "Current Grade: 8.73/10",
         locationLabel: "Zografou, Greece",
         locationHref: "https://maps.app.goo.gl/yUL6R9JpgJPMVmCR6",
         icon: { href: "https://www.di.uoa.gr/front", src: "/images/18.png" },
@@ -352,8 +351,7 @@ export const site = {
         school: "9th High School of Peristeri",
         period: "SEP 2021 - JUN 2024",
         program: "General Public High School",
-        description:
-          "The 9th General Lyceum of Peristeri is a public upper secondary school located in the municipality of Peristeri, Athens. It provides a general education curriculum aimed at preparing students for university entrance, while also encouraging participation in cultural, scientific, and social activities.",
+        description: "Grade Finished: 19.3/20",
         locationLabel: "Peristeri, Greece",
         locationHref: "https://maps.app.goo.gl/yBFTra3XTEwgzG8n9",
         icon: { href: "https://9lyk-perist.att.sch.gr/", src: "/images/19.png" },
