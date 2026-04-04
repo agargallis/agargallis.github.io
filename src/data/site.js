@@ -315,7 +315,7 @@ export const site = {
       },
       {
         title: "Statistics Specialist",
-        period: "JAN 2025 - MAR 2026",
+        period: "JAN 2025 - APR 2026",
         description: "Basketaki The League",
       },
       {
