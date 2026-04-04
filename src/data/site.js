@@ -351,7 +351,7 @@ export const site = {
         school: "9th High School of Peristeri",
         period: "SEP 2021 - JUN 2024",
         program: "General Public High School",
-        description: "Grade Finished: 19.3/20",
+        description: "Grade Finished: 19.4/20",
         locationLabel: "Peristeri, Greece",
         locationHref: "https://maps.app.goo.gl/yBFTra3XTEwgzG8n9",
         icon: { href: "https://9lyk-perist.att.sch.gr/", src: "/images/19.png" },
