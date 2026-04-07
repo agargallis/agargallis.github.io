@@ -70,7 +70,7 @@ export const site = {
       {
         title: "Google Business",
         href:
-          "https://www.google.com/search?q=%CE%AC%CF%83%CF%80%CF%81%CE%BF+%CF%80%CF%81%CF%8C%CE%B2%CE%B1%CF%84%CE%BF+%CE%BA%CF%81%CE%B5%CE%B1%CF%84%CE%BF%CF%86%CE%B1%CE%B3%CE%B5%CE%AF%CE%BF%CE%BD&oq=%CE%86%CF%83%CF%80%CF%81%CE%BF&gs_lcrp=EgZjaHJvbWUqDggAECMYExgnGIAEGIoFMg4IABAjGBMYJxiABBiKBTIGCAEQRRg5MgcIAhAAGIAEMgcIAxAuGIAEMgYIBBAAGB4yBggFEAAYHjIGCAYQABgeMgYIBxAAGB4yBggIEAAYHjIGCAkQABge0gEINTYyOGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8",
+          "https://shorturl.at/M7Tgf",
         icon: "/images/2991148.png",
       },
       {
