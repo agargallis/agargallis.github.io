@@ -153,6 +153,11 @@ export const site = {
         href: "https://metaxumas.gr",
         icon: "/images/100.png",
       },
+      {
+        title: "Basketball Team Website",
+        href: "https://noobs.gr",
+        icon: "https://i.imgur.com/eTLKehA.png",
+      },
     ],
   },
   certifications: {
