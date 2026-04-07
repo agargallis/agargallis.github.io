@@ -167,7 +167,7 @@ export const site = {
           "Databases Management & ML",
           "Claude Code",
         ],
-        cta: { label: "ThinkBiz Academy", href: "https://thinkbiz.gr/projects/thinkbiz-academy-2025/" },
+        cta: { label: "ThinkBiz", href: "https://thinkbiz.gr/" },
         icons: [
           { href: "https://www.facebook.com/thinkbizgr/", src: "/images/ThinkBIz-Academy-Logo-transparent.webp" },
           { href: "https://hackathon-ibm-1.onrender.com/", src: "/earthriskai.jpg" },
