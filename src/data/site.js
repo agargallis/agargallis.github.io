@@ -158,6 +158,11 @@ export const site = {
         href: "https://noobs.gr",
         icon: "https://i.imgur.com/eTLKehA.png",
       },
+      {
+        title: "Instagram Page",
+        href: "https://www.instagram.com/ssmoto.gr/",
+        icon: "https://i.imgur.com/cBg6pe0.png",
+      },
     ],
   },
   certifications: {
