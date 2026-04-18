@@ -319,7 +319,7 @@ export const site = {
     ],
     work: [
       {
-        title: "Referee Specialist",
+        title: "Basketball Referee",
         period: "APR 2026 - TILL NOW",
         description: "Basketaki The League",
       },
