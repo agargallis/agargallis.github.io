@@ -867,4 +867,23 @@ export const initAnimations = () => {
       true
     );
   }
+
+  const backToTopBtn = document.querySelector("[data-back-to-top]");
+
+  if (backToTopBtn) {
+    const toggleVisibility = () => {
+      backToTopBtn.classList.toggle("is-visible", window.scrollY > 300);
+    };
+
+    toggleVisibility();
+
+    if (!document.body.dataset.backToTopBound) {
+      document.body.dataset.backToTopBound = "true";
+      window.addEventListener("scroll", toggleVisibility, { passive: true });
+    }
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 };

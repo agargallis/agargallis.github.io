@@ -87,6 +87,11 @@ const renderRoute = (pathname, options = {}) => {
       ${legalPage ? renderLegalPage(legalPage.key) : route.renderMain()}
     </main>
     ${renderFooter()}
+    <button class="back-to-top" aria-label="Back to top" data-back-to-top>
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M5 15l7-7 7 7"/>
+      </svg>
+    </button>
   `;
 
   initAnimations();
