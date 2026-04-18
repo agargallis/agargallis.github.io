@@ -156,7 +156,7 @@ export const site = {
       {
         title: "Basketball Team Website",
         href: "https://noobs.gr",
-        icon: "https://i.imgur.com/eTLKehA.png",
+        icon: "https://i.imgur.com/ijzC1CF.png",
       },
       {
         title: "Instagram Page",
