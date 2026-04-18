@@ -644,7 +644,7 @@ export const renderFooter = () => {
 
 export const initNavigationTitleHints = () => {
   const titleByPath = {
-    "/": "Antonis Gargallis",
+    "/": "Antonios Gargallis",
     "/contact": "Contact",
     "/resume": "Resume",
   };

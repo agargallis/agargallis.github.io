@@ -20,7 +20,7 @@ const app = document.querySelector("#app");
 
 const routeConfig = {
   "/": {
-    title: "Antonis Gargallis",
+    title: "Antonios Gargallis",
     renderMain: () => `
       ${renderHero()}
       ${renderAboutSection()}

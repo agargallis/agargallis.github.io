@@ -7,7 +7,7 @@ export const site = {
     canonical: "/",
     themeColor: "#0ea5a4",
     organization: {
-      name: "Antonis Gargallis",
+      name: "Antonios Gargallis",
       url: "/",
       logo: "/images/aaa.png",
       sameAs: [
