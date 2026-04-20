@@ -318,14 +318,14 @@ export const site = {
       { name: "ENGLISH", level: "Professional work SUFFICIENCY" },
     ],
     work: [
-      {
+      /*{
         title: "Basketball Referee",
         period: "APR 2026 - TILL NOW",
         description: "Basketaki The League",
-      },
+      },*/
       {
         title: "Statistics Specialist",
-        period: "JAN 2025 - APR 2026",
+        period: "JAN 2025 - NOW",
         description: "Basketaki The League",
       },
       {
