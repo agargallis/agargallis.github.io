@@ -149,6 +149,11 @@ export const site = {
         icon: "/images/4.png",
       },
       {
+        title: "Menu & QR Automation Designing",
+        href: "https://www.papermark.com/view/cmoagucro000dik040fw00dmn",
+        icon: "https://i.imgur.com/KMNGx7t.png",
+      },
+      {
         title: "Food & Lives Restaurant Website",
         href: "https://metaxumas.gr",
         icon: "/images/100.png",
