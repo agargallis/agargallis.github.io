@@ -150,7 +150,7 @@ export const site = {
       },
       {
         title: "Menu & QR Automation Designing",
-        href: "https://www.papermark.com/view/cmoaho7ur001uji04cu7ps7df",
+        href: "https://www.papermark.com/view/cmocy7tdd002ol204d6ttqqtu",
         icon: "https://i.imgur.com/KMNGx7t.png",
       },
       {
