@@ -169,7 +169,7 @@ export const site = {
         icon: "https://i.imgur.com/cBg6pe0.png",
       },
       {
-        title: "Social Building & Maintenance Company Website",
+        title: "Social Media Building & Maintenance",
         href: "https://www.instagram.com/aekperisterioubc/",
         icon: "https://i.imgur.com/hMB8R7q.png",
       },
