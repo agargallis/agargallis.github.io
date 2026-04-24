@@ -168,6 +168,11 @@ export const site = {
         href: "https://www.instagram.com/ssmoto.gr/",
         icon: "https://i.imgur.com/cBg6pe0.png",
       },
+      {
+        title: "Social Building & Maintenance Company Website",
+        href: "https://www.instagram.com/aekperisterioubc/",
+        icon: "https://i.imgur.com/hMB8R7q.png",
+      },
     ],
   },
   certifications: {
