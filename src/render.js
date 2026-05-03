@@ -124,6 +124,25 @@ export const renderBackdrop = () => `
   </div>
 `;
 
+const renderIntroLoader = () => `
+  <div class="intro-loader" data-intro-loader role="status" aria-live="polite" aria-label="${site.introLoader.loadingLabel}">
+    <div class="intro-loader__halo" aria-hidden="true"></div>
+    <div class="intro-loader__card">
+      <div class="intro-loader__logo-ring" aria-hidden="true">
+        <img src="${site.header.logo}" alt="" class="intro-loader__logo" />
+      </div>
+      <p class="intro-loader__title">${site.introLoader.title}</p>
+      <div class="intro-loader__track" aria-hidden="true">
+        <span class="intro-loader__bar"></span>
+      </div>
+      <div class="intro-loader__meta">
+        <span>${site.introLoader.loadingLabel}</span>
+        <span data-intro-progress>0%</span>
+      </div>
+    </div>
+  </div>
+`;
+
 const renderSocials = (socials) =>
   socials
     .map(
@@ -694,6 +713,66 @@ export const initNavigationTitleHints = () => {
     },
     true
   );
+};
+
+export const initIntroLoader = () => {
+  if (typeof document === "undefined" || typeof window === "undefined") {
+    return;
+  }
+
+  const existingLoader = document.querySelector("[data-intro-loader]");
+  if (existingLoader) {
+    return;
+  }
+
+  document.body.insertAdjacentHTML("beforeend", renderIntroLoader());
+
+  const loader = document.querySelector("[data-intro-loader]");
+  const progressText = loader?.querySelector("[data-intro-progress]");
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (!loader) {
+    return;
+  }
+
+  document.body.classList.add("intro-active");
+
+  const duration = prefersReducedMotion ? 450 : 2200;
+  const startedAt = window.performance.now();
+
+  const finishIntro = () => {
+    if (progressText) {
+      progressText.textContent = site.introLoader.completeLabel;
+    }
+    loader.classList.add("is-complete");
+
+    window.setTimeout(() => {
+      loader.remove();
+      document.body.classList.remove("intro-active");
+    }, prefersReducedMotion ? 120 : 650);
+  };
+
+  const tick = (timestamp) => {
+    const elapsed = timestamp - startedAt;
+    const progress = Math.min(elapsed / duration, 1);
+
+    if (progressText) {
+      progressText.textContent = `${Math.round(progress * 100)}%`;
+    }
+
+    loader.style.setProperty("--intro-progress", progress.toFixed(3));
+
+    if (progress < 1) {
+      window.requestAnimationFrame(tick);
+      return;
+    }
+
+    finishIntro();
+  };
+
+  window.requestAnimationFrame(tick);
 };
 
 export const initAnimations = () => {

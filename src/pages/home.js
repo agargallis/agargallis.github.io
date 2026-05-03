@@ -6,6 +6,7 @@ import {
   renderAboutSection,
   renderFooter,
   initNavigationTitleHints,
+  initIntroLoader,
   initAnimations,
 } from "../render";
 
@@ -23,3 +24,4 @@ app.innerHTML = `
 
 initNavigationTitleHints();
 initAnimations();
+initIntroLoader();

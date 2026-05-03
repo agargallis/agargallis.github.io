@@ -33,6 +33,10 @@ body {
   min-height: 100%;
 }
 
+body.intro-active {
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -46,6 +50,144 @@ a {
 #app {
   position: relative;
   z-index: 0;
+}
+
+.intro-loader {
+  --intro-progress: 0;
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(14, 165, 164, 0.22), transparent 30%),
+    radial-gradient(circle at 80% 18%, rgba(43, 123, 216, 0.22), transparent 32%),
+    radial-gradient(circle at 50% 85%, rgba(255, 138, 61, 0.2), transparent 32%),
+    linear-gradient(145deg, rgba(245, 247, 251, 0.98), rgba(233, 239, 247, 0.98));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.intro-loader.is-complete {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.intro-loader__halo {
+  position: absolute;
+  width: min(58vw, 520px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(14, 165, 164, 0.18), rgba(43, 123, 216, 0.08), transparent 68%);
+  filter: blur(18px);
+  animation: introHalo 3.6s ease-in-out infinite;
+}
+
+.intro-loader__card {
+  position: relative;
+  width: min(460px, 100%);
+  padding: clamp(32px, 6vw, 48px);
+  border-radius: 34px;
+  border: 1px solid rgba(43, 123, 216, 0.16);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(238, 242, 247, 0.9));
+  box-shadow: 0 32px 90px rgba(11, 27, 43, 0.16);
+  text-align: center;
+  overflow: hidden;
+}
+
+.intro-loader__card::before {
+  content: "";
+  position: absolute;
+  inset: auto -15% -55% -15%;
+  height: 200px;
+  background: radial-gradient(circle, rgba(14, 165, 164, 0.12), transparent 70%);
+}
+
+.intro-loader__logo-ring {
+  position: relative;
+  width: clamp(108px, 18vw, 148px);
+  height: clamp(108px, 18vw, 148px);
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(14, 165, 164, 0.18), rgba(43, 123, 216, 0.2));
+  border: 1px solid rgba(43, 123, 216, 0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 24px 40px rgba(11, 27, 43, 0.14);
+  animation: introLogoFloat 2.8s ease-in-out infinite;
+}
+
+.intro-loader__logo-ring::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.intro-loader__logo {
+  width: 58%;
+  height: auto;
+  object-fit: contain;
+}
+
+.intro-loader__title {
+  margin: 0 0 22px;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2.35rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.intro-loader__track {
+  position: relative;
+  height: 14px;
+  padding: 3px;
+  border-radius: 999px;
+  background: rgba(11, 27, 43, 0.08);
+  overflow: hidden;
+}
+
+.intro-loader__bar {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: calc(var(--intro-progress) * 100%);
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--accent-3));
+  box-shadow: 0 0 24px rgba(14, 165, 164, 0.35);
+  transition: width 0.12s linear;
+  overflow: hidden;
+}
+
+.intro-loader__bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 48px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  filter: blur(1px);
+  animation: introBarSweep 1.2s linear infinite;
+}
+
+.intro-loader__meta {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-3);
 }
 
 .backdrop {
@@ -1495,6 +1637,37 @@ a {
   }
 }
 
+@keyframes introHalo {
+  0%,
+  100% {
+    transform: scale(0.96);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+}
+
+@keyframes introLogoFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.03);
+  }
+}
+
+@keyframes introBarSweep {
+  0% {
+    transform: translateX(-220%);
+  }
+  100% {
+    transform: translateX(260%);
+  }
+}
+
 @keyframes timelineGlow {
   0%,
   100% {
@@ -1623,6 +1796,15 @@ a {
 }
 
 @media (max-width: 640px) {
+  .intro-loader__card {
+    border-radius: 28px;
+    padding: 28px 22px;
+  }
+
+  .intro-loader__meta {
+    font-size: 0.72rem;
+  }
+
   .header-inner {
     gap: 10px;
     padding: 12px 0;

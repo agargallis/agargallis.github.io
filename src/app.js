@@ -12,6 +12,7 @@ import {
   renderEducationSection,
   renderLegalPage,
   renderFooter,
+  initIntroLoader,
   initAnimations,
 } from "./render";
 import { site } from "./data/site";
@@ -201,3 +202,4 @@ const bindRouter = () => {
 
 bindRouter();
 renderRoute(window.location.pathname, window.history.state || {});
+initIntroLoader();
