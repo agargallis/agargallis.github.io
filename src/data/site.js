@@ -76,7 +76,7 @@ export const site = {
         title: "Google Business",
         href:
           "https://shorturl.at/M7Tgf",
-        icon: "/images/2991148.png",
+        icon: "https://i.imgur.com/hHm5Fho.png",
       },
       {
         title: "Local Restaurant Website",
