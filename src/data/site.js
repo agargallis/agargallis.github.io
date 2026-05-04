@@ -40,8 +40,8 @@ export const site = {
   },
   introLoader: {
     title: "Welcome to my Portfolio!",
-    loadingLabel: "Loading",
-    completeLabel: "Loading",
+    loadingLabel: "Loading...",
+    completeLabel: "Loading...",
   },
   hero: {
     headline: "I'm Antonios Gargallis",
