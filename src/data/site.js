@@ -41,7 +41,7 @@ export const site = {
   introLoader: {
     title: "Welcome to my Portfolio!",
     loadingLabel: "Loading...",
-    completeLabel: "Loading...",
+    completeLabel: "LET'S GO!",
   },
   hero: {
     headline: "I'm Antonios Gargallis",
