@@ -5,6 +5,7 @@ import {
   renderHeader,
   renderLegalPage,
   renderFooter,
+  renderBackToTopButton,
   initAnimations,
 } from "../render";
 
@@ -91,6 +92,7 @@ export const mountLegalPage = (pageKey) => {
       ${renderLegalPage(pageKey)}
     </main>
     ${renderFooter()}
+    ${renderBackToTopButton()}
   `;
 
   applyLegalMeta(pageKey);

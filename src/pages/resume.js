@@ -7,6 +7,7 @@ import {
   renderLanguagesSection,
   renderEducationSection,
   renderFooter,
+  renderBackToTopButton,
   initNavigationTitleHints,
   initAnimations,
 } from "../render";
@@ -23,6 +24,7 @@ app.innerHTML = `
     ${renderProjectsSection()}
   </main>
   ${renderFooter()}
+  ${renderBackToTopButton()}
 `;
 
 initNavigationTitleHints();

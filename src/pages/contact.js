@@ -5,6 +5,7 @@ import {
   renderContactLoop,
   renderFormSection,
   renderFooter,
+  renderBackToTopButton,
   initNavigationTitleHints,
   initAnimations,
 } from "../render";
@@ -21,6 +22,7 @@ app.innerHTML = `
     })}
   </main>
   ${renderFooter()}
+  ${renderBackToTopButton()}
 `;
 
 initNavigationTitleHints();

@@ -5,6 +5,7 @@ import {
   renderHero,
   renderAboutSection,
   renderFooter,
+  renderBackToTopButton,
   initNavigationTitleHints,
   initIntroLoader,
   initAnimations,
@@ -20,6 +21,7 @@ app.innerHTML = `
     ${renderAboutSection()}
   </main>
   ${renderFooter()}
+  ${renderBackToTopButton()}
 `;
 
 initNavigationTitleHints();

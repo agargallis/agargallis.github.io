@@ -663,6 +663,14 @@ export const renderFooter = () => {
 `;
 };
 
+export const renderBackToTopButton = () => `
+  <button class="back-to-top" type="button" aria-label="Back to top" aria-hidden="true" tabindex="-1" data-back-to-top>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+`;
+
 export const initNavigationTitleHints = () => {
   const titleByPath = {
     "/": "Antonios Gargallis",
@@ -949,22 +957,41 @@ export const initAnimations = () => {
     );
   }
 
-  const backToTopBtn = document.querySelector("[data-back-to-top]");
+  const updateBackToTopVisibility = () => {
+    const backToTopBtn = document.querySelector("[data-back-to-top]");
 
-  if (backToTopBtn) {
-    const toggleVisibility = () => {
-      backToTopBtn.classList.toggle("is-visible", window.scrollY > 300);
-    };
-
-    toggleVisibility();
-
-    if (!document.body.dataset.backToTopBound) {
-      document.body.dataset.backToTopBound = "true";
-      window.addEventListener("scroll", toggleVisibility, { passive: true });
+    if (!backToTopBtn) {
+      return;
     }
 
-    backToTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+    const isVisible = window.scrollY > 300;
+    backToTopBtn.classList.toggle("is-visible", isVisible);
+    backToTopBtn.setAttribute("aria-hidden", String(!isVisible));
+
+    if (isVisible) {
+      backToTopBtn.removeAttribute("tabindex");
+    } else {
+      backToTopBtn.setAttribute("tabindex", "-1");
+    }
+  };
+
+  updateBackToTopVisibility();
+
+  if (!document.body.dataset.backToTopBound) {
+    document.body.dataset.backToTopBound = "true";
+    window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+    document.addEventListener("click", (event) => {
+      const backToTopBtn = event.target.closest("[data-back-to-top]");
+
+      if (!backToTopBtn) {
+        return;
+      }
+
+      const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth";
+
+      window.scrollTo({ top: 0, left: 0, behavior });
     });
   }
 };
