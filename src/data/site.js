@@ -367,7 +367,7 @@ export const site = {
         school: "National & Kapodistrian University of Athens",
         period: "SEP 2024 - TILL NOW",
         program: "Department of Informatics and Telecommunications",
-        description: "Current Grade: 8.73/10",
+        description: "Current Grade: 8.71/10",
         locationLabel: "Zografou, Greece",
         locationHref: "https://maps.app.goo.gl/yUL6R9JpgJPMVmCR6",
         icon: { href: "https://www.di.uoa.gr/front", src: "/images/18.png" },
