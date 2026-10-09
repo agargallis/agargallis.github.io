@@ -73,6 +73,11 @@ export const site = {
     title: "Projects",
     items: [
       {
+        title: "Barbershop Booking App",
+        href: "https://koulis80.gr",
+        icon: "/images/koulis1980.webp",
+      },
+      {
         title: "Google Business",
         href:
           "https://shorturl.at/M7Tgf",
@@ -127,11 +132,6 @@ export const site = {
         title: "Barbershop Queue System",
         href: "https://barbershop-qr.vercel.app",
         icon: "/3.png",
-      },
-      {
-        title: "Barbershop Booking App",
-        href: "https://barbershop-booking-jet.vercel.app/",
-        icon: "/images/barber.png",
       },
       {
         title: "Instagram Page",
