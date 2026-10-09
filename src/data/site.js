@@ -94,11 +94,6 @@ export const site = {
         icon: "/images/coop2.png",
       },
       {
-        title: "Clothing Store Website",
-        href: "https://moltevita.com",
-        icon: "/images/Photoroom_20251013_005717.png",
-      },
-      {
         title: "Startup Website",
         href: "https://ubd.gr",
         icon: "/images/photo_profile3.png",
