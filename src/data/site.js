@@ -73,11 +73,6 @@ export const site = {
     title: "Projects",
     items: [
       {
-        title: "Barbershop Booking App",
-        href: "https://koulis80.gr",
-        icon: "/images/koulis1980.webp",
-      },
-      {
         title: "Google Business",
         href:
           "https://shorturl.at/M7Tgf",
@@ -177,6 +172,11 @@ export const site = {
         title: "Competitive Math Platform",
         href: "https://mathletes.gr",
         icon: "/images/mathletes.webp",
+      },
+      {
+        title: "Barbershop Booking App",
+        href: "https://koulis80.gr",
+        icon: "/images/koulis1980.webp",
       },
     ],
   },
