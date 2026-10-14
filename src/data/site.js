@@ -339,7 +339,7 @@ export const site = {
         description: "Basketaki The League",
       },*/
       {
-        title: "Total Manager",
+        title: "Total Manager & Leveraging AI Projects",
         period: "OCT 2025 - TILL NOW",
         description: "UBD | Upgrading Business Digitally",
         image: {
