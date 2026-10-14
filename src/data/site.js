@@ -341,7 +341,7 @@ export const site = {
       {
         title: "Total Manager",
         period: "OCT 2025 - TILL NOW",
-        description: "UBD",
+        description: "UBD | Upgrading Business Digitally",
         image: {
           src: "/images/photo_profile3.png",
           alt: "UBD",
