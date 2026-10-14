@@ -11,7 +11,7 @@ export const site = {
       url: "/",
       logo: "/images/aaa.png",
       sameAs: [
-        "https://gr.linkedin.com/in/antonis-gargallis-0713ba326",
+        "https://gr.linkedin.com/in/agargallis",
         "https://github.com/agargallis",
         "https://www.instagram.com/agargallis",
       ],
@@ -23,7 +23,7 @@ export const site = {
     socials: [
       {
         label: "LinkedIn",
-        href: "https://gr.linkedin.com/in/antonis-gargallis-0713ba326",
+        href: "https://gr.linkedin.com/in/agargallis",
         icon: "/images/2397.png",
       },
       {
