@@ -339,9 +339,14 @@ export const site = {
         description: "Basketaki The League",
       },*/
       {
-        title: "Statistics Specialist",
-        period: "JAN 2025 - JUN 2026",
-        description: "Basketaki The League",
+        title: "Total Manager",
+        period: "OCT 2025 - TILL NOW",
+        description: "UBD",
+        image: {
+          src: "/images/photo_profile3.png",
+          alt: "UBD",
+          href: "https://ubd.gr/",
+        },
       },
       {
         title: "Teaching Assistant of Blind Student",
