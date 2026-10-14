@@ -51,7 +51,7 @@ export const site = {
         href: "https://www.di.uoa.gr",
       },
       {
-        text: "Founder & Total Manager of Upgrading Business Digitally",
+        text: "Total Manager of Upgrading Business Digitally",
         href: "https://ubd.gr",
       },
     ],
@@ -63,7 +63,7 @@ export const site = {
   about: {
     title: "Few things about me",
     intro:
-      "I was born in October of 2006 in Athens. I successfully completed my high school education at the 9th General Lyceum of Peristeri in June of 2024, and I am currently pursuing my studies in the Department of Informatics and Telecommunications at the National and Kapodistrian University of Athens. I am the founder & total manager of UBD, a startup focused on providing comprehensive digital solutions for businesses.",
+      "I was born in October of 2006 in Athens. I successfully completed my high school education at the 9th General Lyceum of Peristeri in June of 2024, and I am currently pursuing my studies in the Department of Informatics and Telecommunications at the National and Kapodistrian University of Athens. I am the total manager of UBD, a startup focused on providing comprehensive digital solutions for businesses.",
     highlights: [
       "Focus: Web Solutions & Digital Growth",
       "Driven by: Innovation, Speed, Quality",
@@ -339,7 +339,7 @@ export const site = {
         description: "Basketaki The League",
       },*/
       {
-        title: "Total Manager & Leveraging AI Projects Coordinator",
+        title: "Leveraging AI Projects Coordinator",
         period: "OCT 2025 - TILL NOW",
         description: "UBD | Upgrading Business Digitally",
         image: {
