@@ -119,11 +119,6 @@ export const site = {
         icon: "/images/transparent-Photoroom1.png",
       },
       {
-        title: "Barbershop Queue System",
-        href: "https://barbershop-qr.vercel.app",
-        icon: "/3.png",
-      },
-      {
         title: "Instagram Page",
         href: "https://www.instagram.com/kalamaki_lab/",
         icon: "/images/IMG_4214.png",
