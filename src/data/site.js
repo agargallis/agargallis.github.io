@@ -164,7 +164,7 @@ export const site = {
         icon: "https://i.imgur.com/hMB8R7q.png",
       },
       {
-        title: "Competitive Math Platform",
+        title: "Maths Platform",
         href: "https://mathletes.gr",
         icon: "/images/mathletes.webp",
       },
