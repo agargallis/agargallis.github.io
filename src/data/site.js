@@ -75,7 +75,7 @@ export const site = {
       {
         title: "Google Business",
         href:
-          "https://shorturl.at/M7Tgf",
+          "https://share.google/p0X7VdFljFv81vGCa",
         icon: "https://i.imgur.com/Fjx4DWi.png",
       },
       {
